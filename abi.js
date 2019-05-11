@@ -87,6 +87,20 @@ const abi = [
 	{
 		"constant": true,
 		"inputs": [],
+		"name": "getMessageroom1_Air_conditioner_S",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
 		"name": "room1_light",
 		"outputs": [
 			{
@@ -183,6 +197,20 @@ const abi = [
 		"type": "function"
 	},
 	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "newroom2_Air_conditioner_S",
+				"type": "string"
+			}
+		],
+		"name": "setMessageroom2AirConditioner_S",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"constant": true,
 		"inputs": [],
 		"name": "getMessageroom2_TV",
@@ -253,24 +281,6 @@ const abi = [
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "newroom1_Air_conditioner_S",
-				"type": "string"
-			},
-			{
-				"name": "newroom1_Air_conditioner_T",
-				"type": "string"
-			}
-		],
-		"name": "setMessageroom1AirConditioner",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"constant": true,
 		"inputs": [],
 		"name": "getMessageLivingRoomAirConditioner_S",
@@ -302,6 +312,20 @@ const abi = [
 		"constant": false,
 		"inputs": [
 			{
+				"name": "newroom1_Air_conditioner_S",
+				"type": "string"
+			}
+		],
+		"name": "setMessageroom1AirConditioner_S",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
 				"name": "newroom1_TV",
 				"type": "string"
 			}
@@ -310,6 +334,20 @@ const abi = [
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getMessageroom2_Air_conditioner_T",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -439,24 +477,6 @@ const abi = [
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "newroom2_Air_conditioner_S",
-				"type": "string"
-			},
-			{
-				"name": "newroom2_Air_conditioner_T",
-				"type": "string"
-			}
-		],
-		"name": "setMessageroom2AirConditioner",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"constant": true,
 		"inputs": [],
 		"name": "kitchen_light",
@@ -541,6 +561,34 @@ const abi = [
 		"type": "function"
 	},
 	{
+		"constant": true,
+		"inputs": [],
+		"name": "getMessageroom2_Air_conditioner_S",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getMessageroom1_Air_conditioner_T",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"constant": false,
 		"inputs": [
 			{
@@ -571,7 +619,7 @@ const abi = [
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "getMessageroom2_Air_conditioner",
+		"name": "getMessagerestroom_light",
 		"outputs": [
 			{
 				"name": "",
@@ -583,17 +631,17 @@ const abi = [
 		"type": "function"
 	},
 	{
-		"constant": true,
-		"inputs": [],
-		"name": "getMessagerestroom_light",
-		"outputs": [
+		"constant": false,
+		"inputs": [
 			{
-				"name": "",
+				"name": "newroom2_Air_conditioner_T",
 				"type": "string"
 			}
 		],
+		"name": "setMessageroom2AirConditioner_T",
+		"outputs": [],
 		"payable": false,
-		"stateMutability": "view",
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -765,20 +813,6 @@ const abi = [
 		"type": "function"
 	},
 	{
-		"constant": true,
-		"inputs": [],
-		"name": "getMessageroom1_Air_conditioner",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"constant": false,
 		"inputs": [
 			{
@@ -815,6 +849,20 @@ const abi = [
 			}
 		],
 		"name": "setMessagekitchen_Microwave_Oven",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "newroom1_Air_conditioner_T",
+				"type": "string"
+			}
+		],
+		"name": "setMessageroom1AirConditioner_T",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",

@@ -27,24 +27,26 @@ contract Smart_home{
     string public restroom_Heating;
     
     //living_room_Air_conditioner
-    function setMessageLivingRoomAirConditioner(string memory newliving_room_Air_conditioner_S,string memory newliving_room_Air_conditioner_T)public{
+    function setMessageLivingRoomAirConditioner_S(string memory newliving_room_Air_conditioner_S)public{
         living_room_Air_conditioner_S=newliving_room_Air_conditioner_S;
+    }
+    
+     function getMessageLivingRoomAirConditioner_S() view public returns (string){
+         return living_room_Air_conditioner_S;
+     }
+     
+     
+    function setMessageLivingRoomAirConditioner_T(string memory newliving_room_Air_conditioner_T)public{
         living_room_Air_conditioner_T=newliving_room_Air_conditioner_T;
     }
-     function getMessageLivingRoomAir() view public returns (string){
-        bytes memory _ba = bytes(living_room_Air_conditioner_S);
-        bytes memory _bb = bytes(living_room_Air_conditioner_T);
-        string memory ret = new string(_ba.length + _bb.length);
-        bytes memory bret = bytes(ret);
-        uint k = 0;
-        for (uint i = 0; i < _ba.length; i++)bret[k++] = _ba[i];
-        for (i = 0; i < _bb.length; i++) bret[k++] = _bb[i];
-        return string(ret);
+    
+     function getMessageLivingRoomAirConditioner_T() view public returns (string){
+         return living_room_Air_conditioner_T;
      }
     //living_room_TV
     function setMessageLivingRoomTV(string memory newliving_room_TV)public{
         living_room_TV=newliving_room_TV;
-    }
+    }   
     function getMessageLivingRoomTV()public view returns(string){
         return living_room_TV;
     }
@@ -88,19 +90,18 @@ contract Smart_home{
     
     //room1
     //room1_Air_conditioner;
-   function setMessageroom1AirConditioner(string newroom1_Air_conditioner_S,string newroom1_Air_conditioner_T)public{
+   function setMessageroom1AirConditioner_S(string newroom1_Air_conditioner_S)public{
         room1_Air_conditioner_S=newroom1_Air_conditioner_S;
+    }
+    function getMessageroom1_Air_conditioner_S() view public returns (string){
+        return room1_Air_conditioner_S;
+     }
+    
+   function setMessageroom1AirConditioner_T(string newroom1_Air_conditioner_T)public{
         room1_Air_conditioner_T=newroom1_Air_conditioner_T;
     }
-    function getMessageroom1_Air_conditioner() view public returns (string){
-        bytes memory _ba = bytes(room1_Air_conditioner_S);
-        bytes memory _bb = bytes(room1_Air_conditioner_T);
-        string memory ret = new string(_ba.length + _bb.length);
-        bytes memory bret = bytes(ret);
-        uint k = 0;
-        for (uint i = 0; i < _ba.length; i++)bret[k++] = _ba[i];
-        for (i = 0; i < _bb.length; i++) bret[k++] = _bb[i];
-        return string(ret);
+    function getMessageroom1_Air_conditioner_T() view public returns (string){
+        return room1_Air_conditioner_T;
      }
     //room1_ligth
     function setMessageroom1_ligth(string newroom1_light)public{
@@ -125,19 +126,19 @@ contract Smart_home{
     }
      //room2
     //room2_Air_conditioner;
-   function setMessageroom2AirConditioner(string newroom2_Air_conditioner_S,string newroom2_Air_conditioner_T)public{
+   function setMessageroom2AirConditioner_S(string newroom2_Air_conditioner_S)public{
         room2_Air_conditioner_S=newroom2_Air_conditioner_S;
+    }
+    function getMessageroom2_Air_conditioner_S() view public returns (string){
+        return room2_Air_conditioner_S;
+     }
+     
+     
+   function setMessageroom2AirConditioner_T(string newroom2_Air_conditioner_T)public{
         room2_Air_conditioner_T=newroom2_Air_conditioner_T;
     }
-    function getMessageroom2_Air_conditioner() view public returns (string){
-        bytes memory _ba = bytes(room2_Air_conditioner_S);
-        bytes memory _bb = bytes(room2_Air_conditioner_T);
-        string memory ret = new string(_ba.length + _bb.length);
-        bytes memory bret = bytes(ret);
-        uint k = 0;
-        for (uint i = 0; i < _ba.length; i++)bret[k++] = _ba[i];
-        for (i = 0; i < _bb.length; i++) bret[k++] = _bb[i];
-        return string(ret);
+    function getMessageroom2_Air_conditioner_T() view public returns (string){
+        return room2_Air_conditioner_T;
      }
     //room2_light
     function setMessageroom2_light(string newroom2_light)public{
