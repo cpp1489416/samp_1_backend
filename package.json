@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "express": "^4.16.4",
     "ganache-cli": "^6.4.3",
-    "solc": "^0.5.8"
+    "solc": "^0.4.17",
+    "web3": "^0.20.0"
   }
 }
