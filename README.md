@@ -9,7 +9,7 @@
    
    PUT /eth
 
-   请求体
+   请求
    ``` json
    {
        "url": "http://localhost:8545",
@@ -20,7 +20,7 @@
 5. 获取数据
    GET /livingRoom
 
-   相应体
+   响应
    ``` json
     {
         "code": "0",
@@ -44,7 +44,7 @@
 
    PUT /livingRoom
 
-   请求体
+   请求
 
    ``` json
     {
