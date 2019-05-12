@@ -3,7 +3,7 @@
 
 2. ``` nohup ganache-cli &! ```
 
-3. 启动服务器 ``` node app.js ```
+3. ``` node app.js ```
 
 4. 配置地址和token
    
