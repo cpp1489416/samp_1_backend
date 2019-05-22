@@ -1,31 +1,81 @@
+
 pragma solidity ^0.4.17;
 contract Smart_home{
     string public living_room_Air_conditioner_S;
     string public living_room_Air_conditioner_T;
     string public living_room_TV;
     string public living_room_light;
+    string public living_room_history;
     
     string public kitchen_light;
     string public kitchen_Microwave_Oven;
     string public kitchen_Rice_cooker;
     string public kitchen_Lampblack_machine;
+    string public kitchen_history;
     
     string public room1_light;
     string public room1_Bedside_lamp;
     string public room1_TV;
     string public room1_Air_conditioner_S;
     string public room1_Air_conditioner_T;
+    string public room1_history;
     
     string public room2_light;
     string public room2_Bedside_lamp;
     string public room2_TV;
     string public room2_Air_conditioner_S;
     string public room2_Air_conditioner_T;
+    string public room2_history;
     
     string public restroom_light;
     string public restroom_Heater;
     string public restroom_Heating;
-    
+    string public restroom_history;
+
+    // start history
+
+    function get_living_room_history() view public returns (string) {
+        return living_room_history;
+    }
+
+    function set_living_room_history(string memory rhs1) public {
+        living_room_history = rhs1;
+    }
+
+    function get_kitchen_history() view public returns (string) {
+        return kitchen_history;
+    }
+
+    function set_kitchen_history(string memory rhs2) public {
+        kitchen_history = rhs2;
+    }
+
+    function get_room1_history() view public returns (string) {
+        return room1_history;
+    }
+
+    function set_room1_history(string memory rhs3) public {
+        room1_history = rhs3;
+    }
+
+    function get_room2_history() view public returns (string) {
+        return room2_history;
+    }
+
+    function set_room2_history(string memory rhs4) public {
+        room2_history = rhs4;
+    }
+
+    function get_restroom_history() view public returns (string) {
+        return restroom_history;
+    }
+
+    function set_restroom_history(string memory rhs5) public {
+        restroom_history = rhs5;
+    }
+
+    // end history
+
     //living_room_Air_conditioner
     function setMessageLivingRoomAirConditioner_S(string memory newliving_room_Air_conditioner_S)public{
         living_room_Air_conditioner_S=newliving_room_Air_conditioner_S;

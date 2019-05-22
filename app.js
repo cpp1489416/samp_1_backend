@@ -5,6 +5,12 @@ const ethCache = require('./eth_cache')
 
 // ethCache.regenerateContract('http://localhost:8545', '0xbb3e781942b43ee399f06fb2ae546ab6eaa6c83c')
 
+try {
+  JSON.parse("{d}")
+} catch (err) {
+  console.log('an error occured')
+}
+
 const app = express()
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({            

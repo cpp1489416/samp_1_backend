@@ -1,5 +1,5 @@
 
-const abi = [
+const abi =[
 	{
 		"constant": true,
 		"inputs": [],
@@ -60,6 +60,34 @@ const abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "living_room_Air_conditioner_T",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "get_kitchen_history",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "get_living_room_history",
 		"outputs": [
 			{
 				"name": "",
@@ -253,6 +281,20 @@ const abi = [
 		"type": "function"
 	},
 	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "rhs4",
+				"type": "string"
+			}
+		],
+		"name": "set_room2_history",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"constant": true,
 		"inputs": [],
 		"name": "kitchen_Microwave_Oven",
@@ -295,6 +337,34 @@ const abi = [
 		"type": "function"
 	},
 	{
+		"constant": true,
+		"inputs": [],
+		"name": "restroom_history",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "rhs3",
+				"type": "string"
+			}
+		],
+		"name": "set_room1_history",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"constant": false,
 		"inputs": [
 			{
@@ -320,6 +390,20 @@ const abi = [
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "get_room2_history",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -409,6 +493,20 @@ const abi = [
 	{
 		"constant": true,
 		"inputs": [],
+		"name": "kitchen_history",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
 		"name": "getMessageLivingRoomTV",
 		"outputs": [
 			{
@@ -432,6 +530,34 @@ const abi = [
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "rhs1",
+				"type": "string"
+			}
+		],
+		"name": "set_living_room_history",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "get_restroom_history",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -508,6 +634,20 @@ const abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "restroom_light",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "get_room1_history",
 		"outputs": [
 			{
 				"name": "",
@@ -603,9 +743,37 @@ const abi = [
 		"type": "function"
 	},
 	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "rhs5",
+				"type": "string"
+			}
+		],
+		"name": "set_restroom_history",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"constant": true,
 		"inputs": [],
 		"name": "living_room_light",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "room1_history",
 		"outputs": [
 			{
 				"name": "",
@@ -718,6 +886,20 @@ const abi = [
 		"constant": false,
 		"inputs": [
 			{
+				"name": "rhs2",
+				"type": "string"
+			}
+		],
+		"name": "set_kitchen_history",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
 				"name": "newkitchen_Lampblack_machine",
 				"type": "string"
 			}
@@ -774,6 +956,34 @@ const abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "getMessageroom1_Bedside_lamp",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "living_room_history",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "room2_history",
 		"outputs": [
 			{
 				"name": "",
@@ -883,4 +1093,8 @@ const abi = [
 		"type": "function"
 	}
 ]
+for (let i in abi) {
+	delete abi[i]["payable"]
+	delete abi[i]["stateMutability"]
+}
 module.exports = abi

@@ -24,6 +24,12 @@ router.put('/eth', (req, res) => {
 })
 
 router.get('/livingRoom', async (req, res, next) => {
+    let historyCached = []
+    try {
+        historyString = await ethCache.get('get_living_room_history');
+        historyCached = JSON.parse(historyString);
+    } catch(e) {
+    }
     return res.json({
         code: '0',
         msg: '',
@@ -37,7 +43,8 @@ router.get('/livingRoom', async (req, res, next) => {
             },
             light: {
                 on: await ethCache.get('getMessageliving_room_light') === 'on'
-            }
+            },
+            history: historyCached
         }
     })
 })
@@ -47,6 +54,11 @@ router.put('/livingRoom', async (req, res, next) => {
     await ethCache.set('setMessageLivingRoomAirConditioner_T', req.body.airConditioner.temperature)
     await ethCache.set('setMessageLivingRoomTV', req.body.tv.on ? 'on' : 'off')
     await ethCache.set('setMessageliving_room_light', req.body.light.on ? 'on' : 'off')
+    try {
+        JSON.stringify(req.body.history)
+    } catch(e) {
+    }
+    await ethCache.set('set_living_room_history', JSON.stringify(req.body.history))
     return res.json({
         code: '0',
         msg: '',
@@ -55,6 +67,12 @@ router.put('/livingRoom', async (req, res, next) => {
 })
 
 router.get('/kitchen', async (req, res, next) => {
+    let historyCached = []
+    try {
+        historyString = await ethCache.get('get_kitchen_history');
+        historyCached = JSON.parse(historyString);
+    } catch(e) {
+    }
     return res.json({
         code: '0',
         msg: '',
@@ -70,7 +88,8 @@ router.get('/kitchen', async (req, res, next) => {
             },
             lampblackMachine: {
                 on: await ethCache.get('getMessagekitchen_Lampblack_machine') === 'on'
-            }
+            },
+            history: historyCached
         }
     })
 })
@@ -80,6 +99,7 @@ router.put('/kitchen', async(req, res) => {
     await ethCache.set('setMessagekitchen_Microwave_Oven', req.body.microwaveOven.on ? 'on': 'off')
     await ethCache.set('setMessagekitchen_Rice_cooker', req.body.riceCooker.on ? 'on': 'off')
     await ethCache.set('setMessagekitchen_Lampblack_machine', req.body.lampblackMachine.on ? 'on': 'off')
+    await ethCache.set('set_kitchen_history', JSON.stringify(req.body.history))
     return res.json({
         code: '0',
         msg: '',
@@ -88,6 +108,12 @@ router.put('/kitchen', async(req, res) => {
 })
 
 router.get('/room1', async (req, res) => {
+    let historyCached = []
+    try {
+        historyString = await ethCache.get('get_room1_history');
+        historyCached = JSON.parse(historyString);
+    } catch(e) {
+    }
     return res.json({
         code: '0',
         msg: '',
@@ -104,7 +130,8 @@ router.get('/room1', async (req, res) => {
             },
             tv: {
                 on: await ethCache.get('getMessageroom1_TV') === 'on'
-            }
+            },
+            history: historyCached
         }
     })
 })
@@ -115,6 +142,7 @@ router.put('/room1', async (req, res) => {
     await ethCache.set('setMessageroom1_ligth', req.body.light.on ? 'on': 'off')
     await ethCache.set('setMessageroom1_Bedside_lamp', req.body.besideLamp.on ? 'on': 'off')
     await ethCache.set('setMessageroom1_TV', req.body.tv.on ? 'on': 'off')
+    await ethCache.set('set_room1_history', JSON.stringify(req.body.history))
     return res.json({
         code: '0',
         msg: '',
@@ -124,6 +152,12 @@ router.put('/room1', async (req, res) => {
 })
 
 router.get('/room2', async (req, res) => {
+    let historyCached = []
+    try {
+        historyString = await ethCache.get('get_room2_history');
+        historyCached = JSON.parse(historyString);
+    } catch(e) {
+    }
     return res.json({
         code: '0',
         msg: '',
@@ -140,7 +174,8 @@ router.get('/room2', async (req, res) => {
             },
             tv: {
                 on: await ethCache.get('getMessageroom2_TV') === 'on'
-            }
+            },
+            history: historyCached
         }
     })
 })
@@ -151,6 +186,7 @@ router.put('/room2', async (req, res) => {
     await ethCache.set('setMessageroom2_light', req.body.light.on ? 'on': 'off')
     await ethCache.set('setMessageroom2_Bedside_lamp', req.body.besideLamp.on ? 'on': 'off')
     await ethCache.set('setMessageroom2_TV', req.body.tv.on ? 'on': 'off')
+    await ethCache.set('set_room2_history', JSON.stringify(req.body.history))
     return res.json({
         code: '0',
         msg: '',
@@ -161,6 +197,12 @@ router.put('/room2', async (req, res) => {
 
 
 router.get('/restroom', async (req, res) => {
+    let historyCached = []
+    try {
+        historyString = await ethCache.get('get_restroom_history');
+        historyCached = JSON.parse(historyString);
+    } catch(e) {
+    }
     return res.json({
         code: '0',
         msg: '',
@@ -173,7 +215,8 @@ router.get('/restroom', async (req, res) => {
             },
             heating: {
                 on: await ethCache.get('getMessagerestroom_Heating') === 'on'
-            }
+            },
+            history: historyCached
         }
     })
 })
@@ -182,6 +225,7 @@ router.put('/restroom', async (req, res) => {
     await ethCache.set('setMessagerestroom_light', req.body.light.on ? 'on': 'off')
     await ethCache.set('setMessagerestroom_Heater', req.body.heater.on ? 'on' : 'off')
     await ethCache.set('setMessagerestroom_Heating', req.body.heating.on ? 'on': 'off')
+    await ethCache.set('set_restroom_history', JSON.stringify(req.body.history))
     return res.json({
         code: '0',
         msg: '',

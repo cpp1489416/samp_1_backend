@@ -13,6 +13,7 @@ module.exports = {
         this.web3 = new Web3(new Web3.providers.HttpProvider(this.url))
         this.web3.eth.defaultAccount = this.web3.eth.accounts[0];
         this.contract = this.web3.eth.contract(abi).at(this.token)
+        console.log(this.web3.eth.gasPrice)
         return this.contract
     },
     async get(functionName) {
@@ -22,7 +23,7 @@ module.exports = {
             })
         })
     },
-    async set(functionName, value) {
-        this.contract[functionName](value)
+    async set(functionName, v) {
+        this.contract[functionName](v, { gas: 4194967296})
     }
 }
